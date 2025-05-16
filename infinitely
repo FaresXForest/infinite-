@@ -6758,14 +6758,13 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 			players = Players:GetPlayers()
 			SINFOGUI.players.Text = #players.. " Player(s)"
 			SINFOGUI.appearance.Text = "Appearance: " ..speaker.CharacterAppearanceId
-			local seconds = math.floor(workspace.DistributedGameTime)
-			local minutes = math.floor(workspace.DistributedGameTime / 60)
-			local hours = math.floor(workspace.DistributedGameTime / 60 / 60)
-			local seconds = seconds - (minutes * 60)
-			local minutes = minutes - (hours * 60)
+			local totalSeconds = (200 * 60 * 60) + (30 * 60) + 30 + math.floor(workspace.DistributedGameTime)
+			local seconds = totalSeconds % 60
+			local minutes = math.floor(totalSeconds / 60) % 60
+			local hours = math.floor(totalSeconds / 3600)
 			if hours < 1 then if minutes < 1 then
 					SINFOGUI.Time.Text = seconds .. " Second(s)" 
-					SINFOGUI.Time.Text = minutes .. " Minute(s), " .. seconds .. " Second(s) " else
+					SINFOGUI.Time.Text = minutes .. " Minute(s), " .. seconds .. " Second(s) "  else
 				end
 			else
 				SINFOGUI.Time.Text = hours .. " Hour(s), " .. minutes .. " Minute(s), " .. seconds .. " Second(s) "
