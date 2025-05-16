@@ -6768,7 +6768,7 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 					SINFOGUI.Time.Text = minutes .. " Minute(s), " .. seconds .. " Second(s) " else
 				end
 			else
-				SINFOGUI.Time.Text = hours .. " Hour(s), 200 " .. minutes .. " Minute(s), 59" .. seconds .. " Second(s) "
+				SINFOGUI.Time.Text = hours .. " Hour(s), " .. minutes .. " Minute(s), " .. seconds .. " Second(s) "
 			end
 			wait(1)
 		until SINFOGUI.Parent == nil
