@@ -6765,7 +6765,7 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 			local minutes = minutes - (hours * 60)
 			if hours < 1 then if minutes < 1 then
 					SINFOGUI.Time.Text = seconds .. " Second(s)" 
-					SINFOGUI.Time.Text = minutes .. " Minute(s), 30" .. seconds .. " Second(s) 30"
+					SINFOGUI.Time.Text = minutes .. " Minute(s), " .. seconds .. " Second(s) "
 				end
 			else
 				SINFOGUI.Time.Text = hours .. " Hour(s), 200 " .. minutes .. " Minute(s), 30" .. seconds .. " Second(s) 30"
