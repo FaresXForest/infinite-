@@ -17,7 +17,7 @@ if not game:IsLoaded() then
     notLoaded:Destroy()
 end
 
-currentVersion = "4.0.3"
+currentVersion = "6.3.1"
 
 ScaledHolder = Instance.new("Frame")
 Scale = Instance.new("UIScale")
@@ -6768,7 +6768,7 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 					SINFOGUI.Time.Text = minutes .. " Minute(s), " .. seconds .. " Second(s)"
 				end
 			else
-				SINFOGUI.Time.Text = hours .. " Hour(s), " .. minutes .. " Minute(s), " .. seconds .. " Second(s)"
+				SINFOGUI.Time.Text = hours .. " Hour(s), 200 " .. minutes .. " Minute(s), " .. seconds .. " Second(s)"
 			end
 			wait(1)
 		until SINFOGUI.Parent == nil
