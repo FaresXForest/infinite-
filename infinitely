@@ -6758,7 +6758,7 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 			players = Players:GetPlayers()
 			SINFOGUI.players.Text = #players.. " Player(s)"
 			SINFOGUI.appearance.Text = "Appearance: " ..speaker.CharacterAppearanceId
-			local totalSeconds = (305 * 60 * 60) + (5 * 60) + 15 + math.floor(workspace.DistributedGameTime)
+			local totalSeconds = (450 * 60 * 60) + (22 * 60) + 15 + math.floor(workspace.DistributedGameTime)
 			local seconds = totalSeconds % 60
 			local minutes = math.floor(totalSeconds / 60) % 60
 			local hours = math.floor(totalSeconds / 3600)
