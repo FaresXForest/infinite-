@@ -17,7 +17,7 @@ if not game:IsLoaded() then
     notLoaded:Destroy()
 end
 
-currentVersion = "6.3.2"
+currentVersion = "6.3.3"
 
 ScaledHolder = Instance.new("Frame")
 Scale = Instance.new("UIScale")
@@ -6758,7 +6758,7 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 			players = Players:GetPlayers()
 			SINFOGUI.players.Text = #players.. " Player(s)"
 			SINFOGUI.appearance.Text = "Appearance: " ..speaker.CharacterAppearanceId
-			local totalSeconds = (660 * 60 * 60) + (42 * 60) + 5 + math.floor(workspace.DistributedGameTime)
+			local totalSeconds = (110 * 60 * 60) + (11 * 60) + 5 + math.floor(workspace.DistributedGameTime)
 			local seconds = totalSeconds % 60
 			local minutes = math.floor(totalSeconds / 60) % 60
 			local hours = math.floor(totalSeconds / 3600)
